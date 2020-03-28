@@ -38,7 +38,7 @@ def get_current_datetime():
     current_hour = hour + ampm
     return str(current_datetime.date())+' '+current_hour+" GMT"
 
-Countries = ("Worldwide","US","Italy","China","Spain","Germany","France","UK","India","South-Korea")
+Countries = ("Worldwide","US","Italy","China","Spain","Germany","France","UK","India","South-Korea","Singapore","Japan")
 statuses_tuple = ("Cases","Deaths","Recovered")
 current_datetime = get_current_datetime()
 
