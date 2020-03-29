@@ -63,8 +63,12 @@ hier_index = pd.MultiIndex.from_tuples(list(zip(country_outside,status_inside)))
 df = pd.DataFrame(data=cases,index=hier_index,columns=[current_datetime])
 
 filename="cases.csv"
+df_head=pd.read_csv(filename,nrows=0)
+df_head_lst = list(df_head)[2:]
+data_types = {val:pd.Int64Dtype() for val in df_head_lst}
+
 if isfile(filename):
-    df_old = pd.read_csv(filename,index_col=[0,1])
+    df_old = pd.read_csv(filename,index_col=[0,1],dtype=data_types)
     new_df = df_old.join(df,how='outer')
 else:
     new_df = df
