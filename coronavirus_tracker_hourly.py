@@ -30,11 +30,18 @@ def get_number(country="Worldwide"):
 def get_current_datetime():
     current_datetime = datetime.datetime.utcnow()
     if current_datetime.hour <12:
-        hour=str(current_datetime.hour)
         ampm ="am"
+        if current_datetime.hour == 0:
+            hour = str(12)
+        else:
+            hour=str(current_datetime.hour)
     else:
-        hour=str(current_datetime.hour-12)
         ampm ="pm"
+        if current_datetime.hour == 12:
+            hour = str(12)
+        else:
+            hour=str(current_datetime.hour-12)
+
     current_hour = hour + ampm
     return str(current_datetime.date())+' '+current_hour+" GMT"
 
