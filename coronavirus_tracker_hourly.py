@@ -62,7 +62,7 @@ for country in Countries:
 hier_index = pd.MultiIndex.from_tuples(list(zip(country_outside,status_inside)))
 df = pd.DataFrame(data=cases,index=hier_index,columns=[current_datetime])
 
-filename="cases.csv"
+filename="hourly cases.csv"
 df_head=pd.read_csv(filename,nrows=0)
 df_head_lst = list(df_head)[2:]
 data_types = {val:pd.Int64Dtype() for val in df_head_lst}
