@@ -13,3 +13,4 @@ TO DO:
 - Modify hourly code to scrape ALL countries
 - Create code to compare hourly and daily numbers and see what time daily numbers are taken
 - Look into what stastistical analysis to do
+- Tidy and comment on code
