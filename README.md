@@ -6,6 +6,7 @@ conda install pandas
 conda install requests
 conda install beautifulsoup4
 conda install matplotlib
+conda install --name corona_env ipykernel -y
 
 What things do
 - coronavirus_tracker_hourly.py - goes on https://www.worldometers.info/coronavirus/ and scrapes latest data from a list of countries and adds this extra entry to hourly cases.csv
